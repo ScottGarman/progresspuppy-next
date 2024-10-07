@@ -66,6 +66,5 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_29_191408) do
   add_foreign_key "quotes", "users"
   add_foreign_key "settings", "users"
   add_foreign_key "task_categories", "users"
-  add_foreign_key "tasks", "task_categories"
   add_foreign_key "tasks", "users"
 end
