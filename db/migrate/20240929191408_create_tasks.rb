@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration[7.2]
       t.string :status, default: "INCOMPLETE", null: false
       t.date :due_at
       t.datetime :completed_at
-      t.references :task_category, null: false, foreign_key: true
+      t.references :task_category, null: false, foreign_key: false
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
