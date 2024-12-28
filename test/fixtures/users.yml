@@ -1,9 +1,38 @@
-<% password_digest = BCrypt::Password.create("password") %>
+<% password_digest = BCrypt::Password.create("foobarbaz12345") %>
 
-one:
-  email_address: one@example.com
+# These users are people I know in the pdxtech community, for fun I've
+# immortalized them as protagonists in ProgressPuppy's test stories. :)
+donpdonp:
+  first_name: Don
+  last_name: DonLN
+  email_address: donpdonp@example.com
   password_digest: <%= password_digest %>
+  time_zone: 'Pacific Time (US & Canada)'
 
-two:
-  email_address: two@example.com
+leofsiege:
+  first_name: Andrew
+  last_name: AndrewLN
+  email_address: leofsiege@example.com
   password_digest: <%= password_digest %>
+  time_zone: 'Pacific Time (US & Canada)'
+
+agj:
+  first_name: Anthony
+  last_name: AnthonyLN
+  email_address: agj@example.com
+  password_digest: <%= password_digest %>
+  time_zone: 'Pacific Time (US & Canada)'
+
+onewheelskyward:
+  first_name: Andrew
+  last_name: AndrewLN
+  email_address: onewheelskyward@example.com
+  password_digest: <%= password_digest %>
+  time_zone: 'Pacific Time (US & Canada)'
+
+aaronpk:
+  first_name: Aaron
+  last_name: AaronLN
+  email_address: aaronpk@example.com
+  password_digest: <%= password_digest %>
+  time_zone: 'Pacific Time (US & Canada)'
