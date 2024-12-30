@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+donpdonp:
+  display_quotes: false
+  burnination: false
+  user: donpdonp
+
+leofsiege:
+  display_quotes: false
+  burnination: false
+  user: leofsiege
+
+agj:
+  display_quotes: false
+  burnination: false
+  user: agj
+
+onewheelskyward:
+  display_quotes: false
+  burnination: false
+  user: onewheelskyward
+
+aaronpk:
+  display_quotes: false
+  burnination: false
+  user: aaronpk
+
