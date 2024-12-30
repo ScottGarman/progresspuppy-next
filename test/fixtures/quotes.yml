@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  quotation: MyString
-  source: MyString
-  user: one
+donpdonp:
+  quotation: Quotation Text
+  source: Quotation Source
+  user: donpdonp
 
-two:
-  quotation: MyString
-  source: MyString
-  user: two
+leofsiege:
+  quotation: Quotation Text
+  source: Quotation Source
+  user: leofsiege
