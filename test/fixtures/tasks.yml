@@ -1,19 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  summary: MyString
+donpdonp:
+  summary: Have breakfast at Tinys
   priority: 1
-  status: MyString
+  status: INCOMPLETE
   due_at: 2024-12-31
-  completed_at: 2024-12-31 11:18:16
-  task_category: one
-  user: one
+  task_category: donpdonp
+  user: donpdonp
 
-two:
-  summary: MyString
-  priority: 1
-  status: MyString
+leofsiege:
+  summary: Install new washing machine
+  priority: 2
+  status: INCOMPLETE
   due_at: 2024-12-31
-  completed_at: 2024-12-31 11:18:16
-  task_category: two
-  user: two
+  task_category: leofsiege
+  user: leofsiege
