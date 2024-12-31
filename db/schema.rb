@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_31_041017) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_31_041816) do
   create_table "quotes", force: :cascade do |t|
     t.string "quotation", null: false
     t.string "source", null: false
@@ -46,6 +46,20 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_31_041017) do
     t.index ["user_id"], name: "index_task_categories_on_user_id"
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.string "summary", null: false
+    t.integer "priority", default: 3, null: false
+    t.string "status", default: "INCOMPLETE", null: false
+    t.date "due_at"
+    t.datetime "completed_at"
+    t.integer "task_category_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_category_id"], name: "index_tasks_on_task_category_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email_address", null: false
     t.string "password_digest", null: false
@@ -62,4 +76,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_31_041017) do
   add_foreign_key "sessions", "users"
   add_foreign_key "settings", "users"
   add_foreign_key "task_categories", "users"
+  add_foreign_key "tasks", "task_categories"
+  add_foreign_key "tasks", "users"
 end
