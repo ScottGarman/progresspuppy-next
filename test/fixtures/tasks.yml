@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+donpdonp:
+  summary: Have breakfast at Tinys
+  priority: 1
+  status: INCOMPLETE
+  due_at: 2024-12-31
+  task_category: donpdonp
+  user: donpdonp
+
+leofsiege:
+  summary: Install new washing machine
+  priority: 2
+  status: INCOMPLETE
+  due_at: 2024-12-31
+  task_category: leofsiege
+  user: leofsiege
