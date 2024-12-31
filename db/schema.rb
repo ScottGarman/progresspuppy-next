@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_30_080743) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_31_041017) do
   create_table "quotes", force: :cascade do |t|
     t.string "quotation", null: false
     t.string "source", null: false
@@ -38,6 +38,14 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_30_080743) do
     t.index ["user_id"], name: "index_settings_on_user_id"
   end
 
+  create_table "task_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_task_categories_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email_address", null: false
     t.string "password_digest", null: false
@@ -53,4 +61,5 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_30_080743) do
   add_foreign_key "quotes", "users"
   add_foreign_key "sessions", "users"
   add_foreign_key "settings", "users"
+  add_foreign_key "task_categories", "users"
 end
