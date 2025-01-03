@@ -109,7 +109,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "password should be present and not empty" do
-    @user.password = @user.password_confirmation = " " * 12
+    @user.password = @user.password_confirmation = " " * 14
     assert @user.invalid?
     assert @user.errors[:password].any?
   end
