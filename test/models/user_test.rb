@@ -122,4 +122,47 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 14
     assert @user.valid?
   end
+
+  test "each new User should have a default Settings object" do
+    @user.save!
+    assert_not_nil @user.setting
+  end
+
+  test "each new User should have an Uncategorized TaskCategory object" do
+    @user.save!
+    assert_not_empty @user.task_categories
+    assert_equal 1, @user.task_categories.size
+    assert_equal "Uncategorized", @user.task_categories.first.name
+  end
+
+  test "ensure associated model objects get destroyed when a user is" \
+       " destroyed" do
+    @user.save!
+    assert_equal 0, @user.quotes.count
+    assert_equal 0, @user.tasks.count
+
+    quote = Quote.new(quotation: "Sample Quotation", source: "Source")
+    @user.quotes << quote
+    assert_equal 1, @user.quotes.count
+
+    task = Task.new(summary: "My first task",
+                    task_category_id: @user.task_categories.first.id)
+    @user.tasks << task
+    assert_equal 1, @user.tasks.count
+
+    setting_id = @user.setting.id
+    assert_not_nil setting_id
+    tc_id = @user.task_categories.first.id
+    assert_not_nil tc_id
+    task_id = @user.tasks.first.id
+    assert_not_nil task_id
+    quote_id = @user.quotes.first.id
+    assert_not_nil quote_id
+
+    @user.destroy!
+    assert_nil Setting.find_by_id(setting_id)
+    assert_nil TaskCategory.find_by_id(tc_id)
+    assert_nil Task.find_by_id(task_id)
+    assert_nil Quote.find_by_id(quote_id)
+  end
 end

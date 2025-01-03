@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_31_041816) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_03_053515) do
   create_table "quotes", force: :cascade do |t|
     t.string "quotation", null: false
     t.string "source", null: false
@@ -76,6 +76,5 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_31_041816) do
   add_foreign_key "sessions", "users"
   add_foreign_key "settings", "users"
   add_foreign_key "task_categories", "users"
-  add_foreign_key "tasks", "task_categories"
   add_foreign_key "tasks", "users"
 end

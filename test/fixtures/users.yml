@@ -15,24 +15,3 @@ leofsiege:
   email_address: leofsiege@example.com
   password_digest: <%= password_digest %>
   time_zone: 'Pacific Time (US & Canada)'
-
-agj:
-  first_name: Anthony
-  last_name: AnthonyLN
-  email_address: agj@example.com
-  password_digest: <%= password_digest %>
-  time_zone: 'Pacific Time (US & Canada)'
-
-onewheelskyward:
-  first_name: Andrew
-  last_name: AndrewLN
-  email_address: onewheelskyward@example.com
-  password_digest: <%= password_digest %>
-  time_zone: 'Pacific Time (US & Canada)'
-
-aaronpk:
-  first_name: Aaron
-  last_name: AaronLN
-  email_address: aaronpk@example.com
-  password_digest: <%= password_digest %>
-  time_zone: 'Pacific Time (US & Canada)'
